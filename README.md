@@ -1,5 +1,6 @@
 # smart-city-portal
 A working Website For Smart City Portal 
+Working vercel link : https://smart-city-portal-one.vercel.app/
 # Metropolis Next - Smart City Information Portal
 
 A responsive and interactive web portal showcasing smart city initiatives, public utility services, real-time public transit schedules, and municipal grievance logging.
