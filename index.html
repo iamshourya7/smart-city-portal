@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metropolis Next | Smart City Initiative</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-accent">Metro</span>Next
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#initiatives" class="nav-item">Initiatives</a>
+        <a href="#services" class="nav-item">Public Services</a>
+        <a href="#transit" class="nav-item">Transit Hub</a>
+        <a href="#sustainability" class="nav-item">Sustainability</a>
+        <a href="#report" class="nav-btn">Report Issue</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="badge">Next-Gen Urban Ecosystem</span>
+        <h1>Empowering Citizens Through Intelligent Urban Living</h1>
+        <p>Real-time analytics, automated transit networks, and zero-emission resource management designed for sustainable communities.</p>
+        <div class="hero-actions">
+          <a href="#initiatives" class="btn btn-primary">Explore Initiatives</a>
+          <a href="#transit" class="btn btn-outline">Live Transit Tracker</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Initiatives Section -->
+    <section class="section" id="initiatives">
+      <div class="section-header">
+        <span class="section-tag">Urban Innovation</span>
+        <h2>Key Smart Initiatives</h2>
+        <p>Core infrastructure integrations modernizing urban everyday life.</p>
+      </div>
+
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="iot">IoT & Sensors</button>
+        <button class="filter-btn" data-filter="mobility">Mobility</button>
+        <button class="filter-btn" data-filter="clean-energy">Green Tech</button>
+      </div>
+
+      <div class="grid grid-3" id="initiativesGrid">
+        <article class="card" data-category="iot">
+          <div class="card-icon">⚡</div>
+          <h3>Automated Microgrid</h3>
+          <p>Decentralized AI-monitored solar grids dynamically redistributing surplus energy across residential sectors.</p>
+          <span class="pill">IoT & Sensors</span>
+        </article>
+
+        <article class="card" data-category="mobility">
+          <div class="card-icon">🚦</div>
+          <h3>Adaptive Traffic Lights</h3>
+          <p>Sensor-controlled intersections reducing idling time by up to 28% and clearing emergency transit lanes instantly.</p>
+          <span class="pill">Mobility</span>
+        </article>
+
+        <article class="card" data-category="clean-energy">
+          <div class="card-icon">🌱</div>
+          <h3>Pneumatic Solid Waste Hub</h3>
+          <p>Underground automated vacuum waste disposal networks sorting recyclables directly from domestic collection points.</p>
+          <span class="pill">Green Tech</span>
+        </article>
+
+        <article class="card" data-category="iot">
+          <div class="card-icon">💧</div>
+          <h3>Supervisory Water SCADA</h3>
+          <p>Smart acoustic sensors along city pipelines identifying subterranean leaks and water contamination immediately.</p>
+          <span class="pill">IoT & Sensors</span>
+        </article>
+
+        <article class="card" data-category="mobility">
+          <div class="card-icon">🚌</div>
+          <h3>EV Bus Priority Corridors</h3>
+          <p>Inductive-charging bus lanes prioritizing carbon-neutral public transport across high-density arterial roads.</p>
+          <span class="pill">Mobility</span>
+        </article>
+
+        <article class="card" data-category="clean-energy">
+          <div class="card-icon">🏙️</div>
+          <h3>Green Rooftop Standard</h3>
+          <p>Mandatory biosolar roofs counteracting urban heat island effects and capturing rainwater for greywater recycling.</p>
+          <span class="pill">Green Tech</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Public Services Portal -->
+    <section class="section section-alt" id="services">
+      <div class="section-header">
+        <span class="section-tag">Citizen Access</span>
+        <h2>Public Digital Services</h2>
+        <p>Access high-demand administrative services and public records directly online.</p>
+      </div>
+
+      <div class="services-wrapper">
+        <div class="service-box">
+          <div class="service-head">
+            <span class="service-number">01</span>
+            <h4>Digital Utility Billing</h4>
+          </div>
+          <p>Consolidated water, electricity, and municipal tax statements with fast payment gateway integration.</p>
+          <button class="text-link" onclick="triggerAlert('Digital Utility Portal: Redirecting to Unified Gateway...')">Pay Bills Online →</button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-head">
+            <span class="service-number">02</span>
+            <h4>Smart Parking Finder</h4>
+          </div>
+          <p>Real-time occupancy maps across all municipal multi-level parking spots with reservation capability.</p>
+          <button class="text-link" onclick="triggerAlert('Parking System: Fetching geo-spatial spot availability...')">Locate Empty Spot →</button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-head">
+            <span class="service-number">03</span>
+            <h4>Emergency Response Hub</h4>
+          </div>
+          <p>Instant SOS geolocation broadcasting directly to fire, hospital, and municipal law dispatch teams.</p>
+          <button class="text-link" onclick="triggerAlert('Emergency Dispatch: Telemetry connected. Help is ready.')">View Response Grid →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Public Transportation & Live Metric Tracker -->
+    <section class="section" id="transit">
+      <div class="section-header">
+        <span class="section-tag">Live Feed</span>
+        <h2>Transit & Environment Metrics</h2>
+        <p>Interactive telemetry tracking key urban transit lines and environmental quality index (AQI).</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Live Transit Board -->
+        <div class="dashboard-card">
+          <div class="dashboard-title-row">
+            <h3>Metro Rapid Transit Monitor</h3>
+            <span class="live-dot"><span class="dot"></span> Online</span>
+          </div>
+          <div class="table-container">
+            <table class="transit-table">
+              <thead>
+                <tr>
+                  <th>Route</th>
+                  <th>Destination</th>
+                  <th>ETA</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="transitTableBody">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-sm btn-outline" id="refreshTransitBtn">Refresh Transit Schedule</button>
+        </div>
+
+        <!-- Environmental AQI Indicator -->
+        <div class="dashboard-card aqi-card">
+          <h3>Central District Air Quality</h3>
+          <div class="aqi-display">
+            <div class="aqi-score" id="aqiScore">54</div>
+            <div class="aqi-status">
+              <strong id="aqiStatusText">Moderate</strong>
+              <small>PM2.5: <span id="pmValue">13.8</span> µg/m³</small>
+            </div>
+          </div>
+          <p class="aqi-note">Station: Sector 4 Urban Observation Tower (Updated automatically every 10 seconds).</p>
+          <div class="aqi-meter-bar">
+            <div class="aqi-fill" id="aqiFill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability & Clean Energy Breakdown -->
+    <section class="section section-alt" id="sustainability">
+      <div class="section-header">
+        <span class="section-tag">2030 Net-Zero Goals</span>
+        <h2>Sustainable Urban Development</h2>
+        <p>Measurable progress toward carbon neutrality and renewable infrastructure integration.</p>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <span class="stat-number" data-target="68">0</span><span class="stat-suffix">%</span>
+          <p class="stat-label">Clean Energy Share</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="94">0</span><span class="stat-suffix">%</span>
+          <p class="stat-label">Recycled Water Use</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="42">0</span><span class="stat-suffix">k</span>
+          <p class="stat-label">EV Stations Online</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="820">0</span><span class="stat-suffix">ha</span>
+          <p class="stat-label">Urban Green Canopy</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citizen Grievance & Issue Reporter Form -->
+    <section class="section" id="report">
+      <div class="section-header">
+        <span class="section-tag">Citizen Voice</span>
+        <h2>Report a Municipal Issue</h2>
+        <p>Log potholes, broken smart streetlights, or sanitation hazards directly to local authorities.</p>
+      </div>
+
+      <div class="form-container">
+        <form id="grievanceForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Jane Doe" required />
+            <span class="field-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="citizenEmail">Email Address</label>
+            <input type="email" id="citizenEmail" placeholder="jane@example.com" required />
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="issueCategory">Issue Category</label>
+            <select id="issueCategory" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="Street Lighting">Smart Street Lighting Fault</option>
+              <option value="Road Maintenance">Road Damage or Pothole</option>
+              <option value="Waste Management">Pneumatic Waste Overflow</option>
+              <option value="Water Supply">Pipeline Leakage / Contamination</option>
+            </select>
+            <span class="field-error" id="categoryError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="issueLocation">Location / Landmark</label>
+            <input type="text" id="issueLocation" placeholder="Sector 12, North Cross Road" required />
+            <span class="field-error" id="locationError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="issueDescription">Description</label>
+            <textarea id="issueDescription" rows="4" placeholder="Provide details regarding the issue..." required></textarea>
+            <span class="field-error" id="descError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Grievance Ticket</button>
+        </form>
+
+        <div class="form-success" id="formSuccessMessage">
+          <div class="success-icon">✓</div>
+          <h4>Grievance Ticket Registered</h4>
+          <p>Ticket ID: <strong id="ticketId">#MT-0000</strong></p>
+          <p>Your report has been routed to the relevant municipal department. You will receive SMS & email notifications shortly.</p>
+          <button class="btn btn-sm btn-outline" id="resetFormBtn">Submit Another Ticket</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3><span class="logo-accent">Metro</span>Next</h3>
+        <p>Smart City Integrated Data & Public Services Portal. Designed for modern, resilient, and connected cities.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <a href="#initiatives">Initiatives</a>
+        <a href="#services">Citizen Services</a>
+        <a href="#transit">Transit Operations</a>
+        <a href="#sustainability">Green Metrics</a>
+      </div>
+      <div class="footer-meta">
+        <h5>Compliance & Standards</h5>
+        <p>ISO 37120: Sustainable Cities and Communities Compliant.</p>
+        <p class="copyright">© 2026 Metropolis Next Urban Management. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
